@@ -315,7 +315,7 @@ def hapus_akun_kasir():
     while True:
         try:
             index_hapus = int(input("Masukkan index akun yang akan dihapus: "))
-            if 0 <= index_hapus < len(akun_kasir)+1:
+            if 0 < index_hapus < len(akun_kasir)+1:
                 full_data = pd.read_csv('user.csv')
                 full_data = full_data.drop(index_hapus)
                 full_data.to_csv('user.csv', index=False)
